@@ -1,22 +1,32 @@
 <script>
   let formSubmitted = false;
-  let formData = {
+  let formValues = {
     name: '',
     email: '',
     message: '',
   };
 
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+      )
+      .join('&');
+  };
+
   const handleSubmit = function (e) {
     e.preventDefault();
 
-    let formValues = new FormData(formData);
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formValues).toString(),
-    }).then(() => {
-      formSubmitted = true;
-    });
+      body: encode({ 'form-name': 'contact', ...formValues }),
+    })
+      .then(() => {
+        alert('Success!');
+        formSubmitted = true;
+      })
+      .catch((error) => alert(error));
   };
 
   $: {
@@ -63,7 +73,7 @@
           type="text"
           class="contact-form-input"
           placeholder="Name"
-          bind:value={formData.name}
+          bind:value={formValues.name}
         />
       </div>
       <div>
@@ -75,7 +85,7 @@
           class="contact-form-input"
           placeholder="Email"
           required
-          bind:value={formData.email}
+          bind:value={formValues.email}
         />
       </div>
       <div>
@@ -87,7 +97,7 @@
           rows="8"
           class="contact-form-input"
           placeholder="Message"
-          bind:value={formData.message}
+          bind:value={formValues.message}
           required
         />
       </div>
