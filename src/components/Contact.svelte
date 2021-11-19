@@ -20,7 +20,7 @@
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: formData,
+      body: encode({ 'form-name': 'contact', ...formValues }),
     })
       .then(() => {
         alert('Success!');
