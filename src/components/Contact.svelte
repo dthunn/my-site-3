@@ -30,7 +30,7 @@
   };
 
   $: {
-    console.log(formSubmitted);
+    console.log(formValues);
   }
 </script>
 
@@ -82,6 +82,7 @@
           type="email"
           class="contact-form-input"
           placeholder="Email"
+          bind:value={formValues.email}
           required
         />
       </div>
@@ -94,6 +95,7 @@
           rows="8"
           class="contact-form-input"
           placeholder="Message"
+          bind:value={formValues.message}
           required
         />
       </div>
