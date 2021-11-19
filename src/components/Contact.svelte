@@ -64,6 +64,7 @@
       class="contact-form-container"
       method="POST"
       data-netlify="true"
+      netlify
     >
       <div>
         <label for="name" class="contact-form-label">Name</label>
