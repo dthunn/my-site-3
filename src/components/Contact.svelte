@@ -20,7 +20,10 @@
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...formValues }),
+      body: encode({
+        'form-name': e.target.getAttribute('name'),
+        ...formValues,
+      }),
     })
       .then(() => {
         alert('Success!');
@@ -62,6 +65,7 @@
       id="contact-form"
       name="contact"
       class="contact-form-container"
+      method="POST"
       netlify
       data-netlify-recaptcha="true"
     >
@@ -86,7 +90,6 @@
           class="contact-form-input"
           placeholder="Email"
           required
-          bind:value={formValues.email}
         />
       </div>
       <div>
@@ -98,7 +101,6 @@
           rows="8"
           class="contact-form-input"
           placeholder="Message"
-          bind:value={formValues.message}
           required
         />
       </div>
