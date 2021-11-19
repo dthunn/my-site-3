@@ -16,14 +16,16 @@
 
   const handleSubmit = function (e) {
     e.preventDefault();
+    let formData = new FormData();
 
+    formData.append('name', `${formValues.name}`);
+    formData.append('email', `${formValues.email}`);
+    formData.append('message', `${formValues.message}`);
+    console.log(formData);
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': e.target.getAttribute('name'),
-        ...formValues,
-      }),
+      body: formData,
     })
       .then(() => {
         alert('Success!');
