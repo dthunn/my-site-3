@@ -62,11 +62,11 @@
       id="contact-form"
       name="contact"
       class="contact-form-container"
-      method="POST"
-      data-netlify="true"
       netlify
+      data-netlify-recaptcha="true"
     >
       <div>
+        <input type="hidden" name="form-name" value="contact" />
         <label for="name" class="contact-form-label">Name</label>
         <input
           id="name"
