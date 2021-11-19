@@ -41,10 +41,10 @@
 <style>
   .about {
     max-width: 1000px;
-    margin: 10rem auto;
+    margin: 12rem auto;
     color: var(--color-primary);
     padding: 0 4.8rem;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.8s ease-in-out;
     opacity: 0;
     transform: translateY(8rem);
   }
@@ -73,14 +73,15 @@
     text-align: center;
     font-size: 2rem;
     line-height: 1.6;
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 6rem;
+    letter-spacing: 1px;
   }
 
   .role-header {
     font-size: 2.4rem;
     text-align: center;
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 3rem;
   }
 
@@ -97,7 +98,7 @@
     margin: 0 auto;
     list-style: none;
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: 500;
   }
 
   ul li {

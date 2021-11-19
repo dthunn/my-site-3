@@ -1,8 +1,8 @@
 <script>
   import { scrollto } from 'svelte-scrollto';
 
-  let navOpen = false;
   export let isIntersecting;
+  let navOpen = false;
 
   const toggleNav = function () {
     navOpen = !navOpen;
@@ -49,12 +49,24 @@
   </nav>
 
   <a href={'#'}>
-    <img class="logo-mobile" alt="Dylan Thunn Logo" src="/img/logo.png" />
+    {#if !isIntersecting}
+      <img class="logo-mobile" alt="Dylan Thunn Logo" src="/img/logo.png" />
+    {:else}
+      <img
+        class="logo-mobile"
+        alt="Dylan Thunn Logo"
+        src="/img/logo-dark.png"
+      />
+    {/if}
   </a>
 
   <button class="btn-mobile-nav" on:click={toggleNav}>
     {#if !navOpen}
-      <ion-icon class="icon-mobile-nav" name="menu-outline" />
+      <ion-icon
+        class="icon-mobile-nav"
+        name="menu-outline"
+        class:intersecting={isIntersecting}
+      />
     {:else}
       <ion-icon class="icon-mobile-nav close" name="close-outline" />
     {/if}
@@ -115,9 +127,10 @@
     display: inline-block;
     text-decoration: none;
     color: white;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.8rem;
     transition: all 0.3s;
+    letter-spacing: 1px;
   }
 
   .main-nav-link:hover,
@@ -166,6 +179,10 @@
     color: var(--color-secondary);
   }
 
+  .intersecting {
+    color: var(--color-primary);
+  }
+
   /* STICKY NAVIGATION */
   .header.sticky {
     position: fixed;
@@ -180,13 +197,25 @@
     box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.2);
   }
 
-  .header.sticky .main-nav-link {
+  .header.sticky .main-nav-link:link,
+  .header.sticky .main-nav-link:visited {
     color: var(--color-primary);
   }
 
-  /* .sticky .section-hero {
-    margin-top: 9.6rem;
-  } */
+  .header.sticky .main-nav-link:link:hover,
+  .header.sticky .main-nav-link:visited:hover {
+    color: var(--color-secondary);
+  }
+
+  .header.sticky .main-nav-link.nav-cta:link,
+  .header.sticky .main-nav-link.nav-cta:visited {
+    color: var(--color-white);
+  }
+
+  .header.sticky .main-nav-link.nav-cta:link:hover,
+  .header.sticky .main-nav-link.nav-cta:visited:hover {
+    color: var(--color-white);
+  }
 
   @media (max-width: 59em) {
     /* MOBILE NAVIGATION */

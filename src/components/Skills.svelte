@@ -1,5 +1,6 @@
 <script>
   import IntersectionObserver from 'svelte-intersection-observer';
+
   import RustIcon from '../../public/img/rust.svg';
   import MongoIcon from '../../public/img/mongo.svg';
   import PostgresIcon from '../../public/img/postgres.svg';
@@ -85,8 +86,8 @@
 <style>
   .skills-container {
     opacity: 0;
-    transform: translateY(10rem);
-    transition: all 0.5s ease-in-out;
+    transform: translateY(8rem);
+    transition: all 0.8s ease-in-out;
   }
 
   .in-view {
@@ -184,6 +185,7 @@
     text-align: center;
     color: var(--color-white);
     margin-bottom: 5rem;
+    font-weight: 500;
   }
 
   .html {
@@ -213,5 +215,33 @@
     width: 700px;
     margin: 0 auto;
     row-gap: 2.5rem;
+  }
+
+  @media (max-width: 59em) {
+    .skills-icons {
+      grid-template-columns: repeat(4, 1fr);
+      width: 550px;
+    }
+
+    .skills-icons-other {
+      grid-template-columns: repeat(4, 1fr);
+      width: 550px;
+    }
+  }
+
+  @media (max-width: 39em) {
+    .skills-header {
+      font-size: 2.6rem;
+    }
+
+    .skills-icons {
+      grid-template-columns: repeat(3, 1fr);
+      width: 250px;
+    }
+
+    .skills-icons-other {
+      grid-template-columns: repeat(3, 1fr);
+      width: 250px;
+    }
   }
 </style>

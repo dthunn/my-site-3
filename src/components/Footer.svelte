@@ -1,0 +1,26 @@
+<script></script>
+
+<footer class="footer">
+  <div class="footer-text">
+    Copyright © Dylan Thunn {new Date().getFullYear()}
+  </div>
+</footer>
+
+<style>
+  footer {
+    background-color: var(--color-primary);
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12rem;
+  }
+
+  .footer-text {
+    color: var(--color-secondary);
+    font-size: 2rem;
+    font-weight: 500;
+  }
+</style>

@@ -35,19 +35,22 @@
 
   .hero-header-main {
     padding-top: 4rem;
-    font-size: 8.6rem;
-    font-weight: 300;
+    font-size: 9.8rem;
+    font-weight: 400;
     word-spacing: -20px;
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
     margin-bottom: 1.6rem;
+    /* letter-spacing: 1px; */
   }
 
   .hero-header-sub {
     font-size: 2rem;
     animation: moveInRight 1s ease-out;
     margin-bottom: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 1px;
   }
 
   .hero-header-btn {
@@ -65,6 +68,7 @@
     letter-spacing: 1px;
     animation: moveInBottom 1s ease-out;
     position: relative;
+    letter-spacing: 1px;
   }
 
   .hero-header-btn:hover {
