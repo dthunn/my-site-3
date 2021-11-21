@@ -18,7 +18,7 @@
   let intersecting;
 </script>
 
-<IntersectionObserver {element} bind:intersecting>
+<IntersectionObserver {element} bind:intersecting once>
   <section class="skills">
     <div
       class="skills-container"

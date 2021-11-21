@@ -208,10 +208,6 @@
     transform: translate3d(0, 0, 0);
   }
 
-  /* .header.sticky {
-    margin-top: 8rem;
-  } */
-
   .header.sticky .main-nav-link:link,
   .header.sticky .main-nav-link:visited {
     color: var(--color-primary);

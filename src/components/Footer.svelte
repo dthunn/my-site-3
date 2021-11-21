@@ -19,7 +19,7 @@
   }
 
   .footer-text {
-    color: var(--color-secondary);
+    color: var(--color-white);
     font-size: 2rem;
     font-weight: 500;
   }

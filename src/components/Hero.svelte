@@ -25,7 +25,7 @@
     padding: 0 4.8rem;
     color: var(--color-white);
     margin-top: -8rem;
-    z-index: -1;
+    /* z-index: -1; */
   }
 
   .hero.in-view {

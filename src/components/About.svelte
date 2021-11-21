@@ -5,7 +5,7 @@
   let intersecting;
 </script>
 
-<IntersectionObserver {element} bind:intersecting>
+<IntersectionObserver {element} bind:intersecting once>
   <section class="about" bind:this={element} class:in-view={intersecting}>
     <h2 class="about-header">A little about me...</h2>
     <div class="line" />
@@ -68,7 +68,7 @@
     text-align: center;
     font-size: 2rem;
     line-height: 1.6;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 6rem;
     letter-spacing: 1px;
   }
@@ -76,7 +76,7 @@
   .role-header {
     font-size: 2.4rem;
     text-align: center;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 3rem;
   }
 

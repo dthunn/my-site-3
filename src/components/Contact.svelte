@@ -3,7 +3,9 @@
 
   let element;
   let intersecting;
+  let disabled = false;
   let formSubmitted = false;
+  let error = false;
   let formValues = {
     name: '',
     email: '',
@@ -20,6 +22,7 @@
 
   const handleSubmit = function (e) {
     e.preventDefault();
+    disabled = true;
 
     fetch('/', {
       method: 'POST',
@@ -27,26 +30,35 @@
       body: encode({ 'form-name': 'contact', ...formValues }),
     })
       .then(() => {
-        alert('Success!');
         formSubmitted = true;
+        disabled = false;
+        alert('successs');
       })
-      .catch((error) => alert(error));
+      .catch((err) => {
+        formSubmitted = true;
+        error = true;
+        disabled = false;
+      });
   };
 </script>
 
-<IntersectionObserver {element} bind:intersecting>
+<IntersectionObserver {element} bind:intersecting once>
   <section class="contact" bind:this={element} class:in-view={intersecting}>
     <div class="contact-info">
       <h3 class="contact-info-header">A bit more info...</h3>
       <p class="contact-info-text">
         Check out my Github to see what projects I have worked on or take a peek
-        at my resume below if your looking for a new developer. If you need to
-        reach me, feel free to use the email below or just use the contact form!
+        at my resume below if your looking for a new developer. To reach me,
+        feel free to use the email below or just use the contact form!
       </p>
       <div class="contact-info-items">
         <div class="contact-info-item">
           <ion-icon name="logo-github" class="contact-icon" />
-          <a href="https://github.com/dthunn" class="contact-link">My Github</a>
+          <a
+            href="https://github.com/dthunn"
+            class="contact-link"
+            target="_blank">My Github</a
+          >
         </div>
         <div class="contact-info-item">
           <ion-icon name="mail-outline" class="contact-icon" />
@@ -66,47 +78,60 @@
     </div>
     <div class="contact-form">
       <h3 class="contact-form-header">Contact</h3>
-      <form
-        on:submit={handleSubmit}
-        id="contact-form"
-        class="contact-form-container"
-      >
-        <div>
-          <input type="hidden" name="form-name" value="contact" />
-          <label for="name" class="contact-form-label">Name</label>
-          <input
-            id="name"
-            name="name"
-            type="text"
-            class="contact-form-input"
-            bind:value={formValues.name}
-          />
+      {#if !formSubmitted}
+        <form
+          on:submit={handleSubmit}
+          id="contact-form"
+          class="contact-form-container"
+        >
+          <div>
+            <input type="hidden" name="form-name" value="contact" />
+            <label for="name" class="contact-form-label">Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              class="contact-form-input"
+              bind:value={formValues.name}
+            />
+          </div>
+          <div>
+            <label for="email" class="contact-form-label">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              class="contact-form-input"
+              bind:value={formValues.email}
+              required
+            />
+          </div>
+          <div>
+            <label for="message" class="contact-form-label">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="6"
+              class="contact-form-input"
+              bind:value={formValues.message}
+              required
+            />
+          </div>
+          <button {disabled} class="contact-form-btn" type="submit"
+            >Submit</button
+          >
+        </form>
+      {:else if !error}
+        <div class="form-submitted-text">
+          Thank you for reaching out 🙌 I will be in touch soon!
         </div>
-        <div>
-          <label for="email" class="contact-form-label">Email</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            class="contact-form-input"
-            bind:value={formValues.email}
-            required
-          />
+      {:else}
+        <div class="form-submitted-text">
+          Uh oh something went wrong, I blame Netlify 😁, use the email provided
+          instead!
         </div>
-        <div>
-          <label for="message" class="contact-form-label">Message</label>
-          <textarea
-            name="message"
-            id="message"
-            cols="30"
-            rows="6"
-            class="contact-form-input"
-            bind:value={formValues.message}
-            required
-          />
-        </div>
-        <button class="contact-form-btn" type="submit">Submit</button>
-      </form>
+      {/if}
     </div>
   </section>
 </IntersectionObserver>
@@ -138,7 +163,7 @@
   .contact-info-header {
     padding-top: 1.6rem;
     font-size: 3rem;
-    color: var(--color-primary);
+    color: var(--color-secondary-dark);
     margin-bottom: 1rem;
     font-weight: 400;
   }
@@ -146,7 +171,7 @@
   .contact-info-text {
     font-size: 2rem;
     line-height: 1.6;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--color-primary);
     width: 98%;
     margin-bottom: 1.6rem;
@@ -159,7 +184,15 @@
     font-size: 2rem;
     font-weight: 600;
     color: var(--color-primary);
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-info-item a {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .contact-info-item a:hover {
+    color: var(--color-secondary);
   }
 
   .contact-icon {
@@ -179,6 +212,7 @@
     background-color: var(--color-primary);
     padding: 1.6rem 0 2rem 0;
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+    min-height: 28rem;
   }
 
   .contact-form-label {
@@ -228,6 +262,13 @@
     color: var(--color-white);
   }
 
+  .form-submitted-text {
+    margin-top: 8rem;
+    padding: 0 3rem;
+    font-size: 3.6rem;
+    line-height: 1.4;
+  }
+
   @media (max-width: 59em) {
     .contact {
       display: block;
@@ -240,6 +281,7 @@
 
     .contact-info-text {
       text-align: center;
+      /* width: 110%; */
     }
 
     .contact-info-items {
@@ -249,8 +291,22 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
+    .form-submitted-text {
+      margin-top: 6rem;
+      font-size: 3rem;
+    }
+
     @media (max-width: 39em) {
       .contact-info-header {
+        font-size: 2.4rem;
+        /* font-size: 3rem; */
+      }
+
+      .form-submitted-text {
+        font-size: 2.4rem;
+      }
+
+      .contact-form-header {
         font-size: 2.4rem;
       }
 
