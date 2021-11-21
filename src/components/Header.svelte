@@ -14,17 +14,28 @@
 </script>
 
 <header
+  id="home"
   class="header nav-open"
   class:nav-open={navOpen}
   class:sticky={isIntersecting}
 >
   <nav class="main-nav">
     <div>
-      <a href={'#'}>
+      <a href="home">
         {#if !isIntersecting}
-          <img class="logo" alt="Dylan Thunn Logo" src="/img/logo.png" />
+          <img
+            class="logo"
+            alt="Dylan Thunn Logo"
+            src="/img/logo.png"
+            use:scrollto={'#home'}
+          />
         {:else}
-          <img class="logo" alt="Dylan Thunn Logo" src="/img/logo-dark.png" />
+          <img
+            class="logo"
+            alt="Dylan Thunn Logo"
+            src="/img/logo-dark.png"
+            use:scrollto={'#home'}
+          />
         {/if}
       </a>
     </div>
@@ -38,11 +49,19 @@
         >
       </li>
       <li>
-        <a class="main-nav-link" on:click={toggleNavAncor} href={'#'}>Skills</a>
+        <a
+          class="main-nav-link"
+          on:click={toggleNavAncor}
+          href="#skills"
+          use:scrollto={'#skills'}>Skills</a
+        >
       </li>
       <li>
-        <a class="main-nav-link nav-cta" on:click={toggleNavAncor} href={'#'}
-          >Contact</a
+        <a
+          class="main-nav-link nav-cta"
+          on:click={toggleNavAncor}
+          href="#contact"
+          use:scrollto={'#contact'}>Contact</a
         >
       </li>
     </ul>
@@ -195,6 +214,15 @@
     background-color: var(--color-white);
     z-index: 999;
     box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.2);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  .header.sticky {
+    /* margin-top: 9.6rem; */
   }
 
   .header.sticky .main-nav-link:link,
@@ -239,18 +267,8 @@
       align-items: center;
       justify-content: center;
       transition: all 0.3s ease-in;
-
-      /* Hide navigation */
-      /* Allows NO transitions at all */
-      /* display: none; */
-
-      /* 1) Hide it visually */
       opacity: 0;
-
-      /* 2) Make it unaccessible to mouse and keyboard */
       pointer-events: none;
-
-      /* 3) Hide it from screen readers */
       visibility: hidden;
     }
 

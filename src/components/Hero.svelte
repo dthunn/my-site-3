@@ -130,15 +130,15 @@
 
     .hero-header-main {
       padding-top: 0;
-      font-size: 7.4rem;
+      font-size: 8em;
     }
 
     .hero-header-sub {
-      font-size: 1.6rem;
+      font-size: 2rem;
     }
 
     .hero-header-btn {
-      font-size: 1.6rem;
+      font-size: 2rem;
     }
   }
 
@@ -152,11 +152,11 @@
     }
 
     .hero-header-sub {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
     }
 
     .hero-header-btn {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
     }
   }
 </style>
