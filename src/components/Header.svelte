@@ -39,7 +39,7 @@
         {/if}
       </a>
     </div>
-    <ul class="main-nav-list" on:click={toggleNavAncor}>
+    <ul class="main-nav-list">
       <li on:click={toggleNavAncor}>
         <a class="main-nav-link" href="#about" use:scrollto={'#about'}>About</a>
       </li>
@@ -290,6 +290,7 @@
     .main-nav-link:visited {
       font-size: 3rem;
       color: var(--color-primary);
+      z-index: 9999;
     }
 
     .main-nav-link:hover,
