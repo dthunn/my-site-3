@@ -50,22 +50,22 @@
       </p>
       <div class="contact-info-items">
         <div class="contact-info-item">
-          <ion-icon name="location-outline" class="contact-icon" />
-          <h4>Denver, CO</h4>
+          <ion-icon name="logo-github" class="contact-icon" />
+          <a href="https://github.com/dthunn" class="contact-link">My Github</a>
         </div>
         <div class="contact-info-item">
           <ion-icon name="mail-outline" class="contact-icon" />
           <h4>dylan@dthunn.com</h4>
         </div>
         <div class="contact-info-item">
-          <ion-icon name="logo-github" class="contact-icon" />
-          <a href="https://github.com/dthunn" class="contact-link">My Github</a>
-        </div>
-        <div class="contact-info-item">
           <ion-icon name="document-outline" class="contact-icon" />
           <a href="/img/dtresume.pdf" target="_blank" class="contact-link"
             >Resume</a
           >
+        </div>
+        <div class="contact-info-item">
+          <ion-icon name="location-outline" class="contact-icon" />
+          <h4>Denver, CO</h4>
         </div>
       </div>
     </div>
@@ -249,18 +249,28 @@
 
     .contact-info-items {
       margin: 0 auto;
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
 
     @media (max-width: 39em) {
       .contact-info-header {
-        font-size: 3rem;
+        font-size: 2.4rem;
       }
 
       .contact-info-text {
         font-size: 1.4rem;
+      }
+
+      .contact-info-item {
+        font-size: 1.6rem;
+      }
+
+      .contact-icon {
+        font-size: 2rem;
+        margin-right: 2rem;
+        color: var(--color-secondary);
       }
     }
   }

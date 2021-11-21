@@ -1,8 +1,10 @@
 <script>
   import { scrollto } from 'svelte-scrollto';
+
+  export let headerIsIntersecting;
 </script>
 
-<section class="hero">
+<section class="hero" class:in-view={headerIsIntersecting}>
   <div class="hero-container">
     <div class="hero-header-main">Dylan Thunn</div>
     <div class="hero-header-sub">Fullstack Developer / Lifelong Learner</div>
@@ -22,6 +24,12 @@
     position: relative;
     padding: 0 4.8rem;
     color: var(--color-white);
+    margin-top: -8rem;
+    z-index: -1;
+  }
+
+  .hero.in-view {
+    margin-top: 0;
   }
 
   .hero-container {

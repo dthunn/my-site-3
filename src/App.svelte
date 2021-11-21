@@ -21,7 +21,7 @@
 <IntersectionObserver {element} bind:intersecting>
   <Header isIntersecting={intersecting} />
   <main>
-    <Hero />
+    <Hero headerIsIntersecting={intersecting} />
     <About />
     <div bind:this={element}>
       <Skills />

@@ -106,7 +106,7 @@
     align-items: center;
 
     /* Because we want header to be sticky later */
-    height: 9.6rem;
+    height: 8rem;
     padding: 0 4.8rem;
     z-index: 1000;
     width: 100%;
@@ -223,9 +223,9 @@
     transform: translate3d(0, 0, 0);
   }
 
-  .header.sticky {
-    /* margin-top: 9.6rem; */
-  }
+  /* .header.sticky {
+    margin-top: 8rem;
+  } */
 
   .header.sticky .main-nav-link:link,
   .header.sticky .main-nav-link:visited {
