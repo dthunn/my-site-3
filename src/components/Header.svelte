@@ -40,26 +40,17 @@
       </a>
     </div>
     <ul class="main-nav-list">
-      <li>
-        <a
-          class="main-nav-link"
-          href="#about"
-          on:click={toggleNavAncor}
-          use:scrollto={'#about'}>About</a
+      <li on:click={toggleNavAncor}>
+        <a class="main-nav-link" href="#about" use:scrollto={'#about'}>About</a>
+      </li>
+      <li on:click={toggleNavAncor}>
+        <a class="main-nav-link" href="#skills" use:scrollto={'#skills'}
+          >Skills</a
         >
       </li>
-      <li>
-        <a
-          class="main-nav-link"
-          on:click={toggleNavAncor}
-          href="#skills"
-          use:scrollto={'#skills'}>Skills</a
-        >
-      </li>
-      <li>
+      <li on:click={toggleNavAncor}>
         <a
           class="main-nav-link nav-cta"
-          on:click={toggleNavAncor}
           href="#contact"
           use:scrollto={'#contact'}>Contact</a
         >
@@ -104,6 +95,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: transparent;
 
     /* Because we want header to be sticky later */
     height: 8rem;
@@ -111,7 +103,7 @@
     z-index: 1000;
     width: 100%;
     color: white;
-    /* position: relative; */
+    position: relative;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
