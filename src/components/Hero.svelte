@@ -171,19 +171,19 @@
     }
   }
 
-  @media (max-width: 39em) {
+  /* @media (max-width: 39em) {
     .hero-header-main {
-      font-size: 4rem;
+      font-size: 4.6rem;
     }
 
     .hero-header-sub {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
 
     .hero-header-btn {
       font-size: 1.2rem;
     }
-  }
+  } */
 
   @media (max-width: 23em) {
     .hero-header-main {
