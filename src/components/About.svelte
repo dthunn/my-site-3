@@ -6,12 +6,7 @@
 </script>
 
 <IntersectionObserver {element} bind:intersecting>
-  <section
-    class="about"
-    id="about"
-    bind:this={element}
-    class:in-view={intersecting}
-  >
+  <section class="about" bind:this={element} class:in-view={intersecting}>
     <h2 class="about-header">A little about me...</h2>
     <div class="line" />
     <p class="about-text">

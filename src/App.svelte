@@ -22,9 +22,12 @@
   <Header isIntersecting={intersecting} />
   <main>
     <Hero headerIsIntersecting={intersecting} />
+    <div id="about" />
     <About />
     <div bind:this={element}>
+      <div id="skills" />
       <Skills />
+      <div id="contact" />
       <Contact />
     </div>
   </main>

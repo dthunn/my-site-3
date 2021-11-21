@@ -30,7 +30,7 @@
 >
   <nav class="main-nav" on:click={toggleNavUl}>
     <div>
-      <a href="home">
+      <a href="#home">
         {#if !isIntersecting}
           <img class="logo" alt="Dylan Thunn Logo" src="/img/logo.png" />
         {:else}

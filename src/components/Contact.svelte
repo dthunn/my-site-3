@@ -35,12 +35,7 @@
 </script>
 
 <IntersectionObserver {element} bind:intersecting>
-  <section
-    id="contact"
-    class="contact"
-    bind:this={element}
-    class:in-view={intersecting}
-  >
+  <section class="contact" bind:this={element} class:in-view={intersecting}>
     <div class="contact-info">
       <h3 class="contact-info-header">A bit more info...</h3>
       <p class="contact-info-text">

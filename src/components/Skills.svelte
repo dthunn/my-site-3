@@ -19,7 +19,7 @@
 </script>
 
 <IntersectionObserver {element} bind:intersecting>
-  <section id="skills" class="skills">
+  <section class="skills">
     <div
       class="skills-container"
       bind:this={element}
