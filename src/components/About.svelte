@@ -8,7 +8,6 @@
 <IntersectionObserver {element} bind:intersecting once>
   <section class="about" bind:this={element} class:in-view={intersecting}>
     <h2 class="about-header">A little about me...</h2>
-    <div class="line" />
     <p class="about-text">
       I am a graphic designer turned fullstack developer. After getting into
       graphic design because of a background in art, I never really felt it was
@@ -36,7 +35,7 @@
 <style>
   .about {
     max-width: 1000px;
-    margin: 12rem auto;
+    margin: 10rem auto;
     color: var(--color-primary);
     padding: 0 4.8rem;
     transition: all 0.8s ease-in-out;
@@ -52,16 +51,9 @@
   .about-header {
     font-size: 3.2rem;
     text-align: center;
-    margin-bottom: 1.4rem;
-    font-weight: 400;
-  }
-
-  .line {
-    width: 4.2rem;
-    height: 2px;
-    background-color: var(--color-secondary-dark);
-    margin: 0 auto;
     margin-bottom: 3rem;
+    font-weight: 400;
+    color: var(--color-secondary-dark);
   }
 
   .about-text {
@@ -87,6 +79,7 @@
   .role-list {
     display: flex;
     justify-content: center;
+    font-weight: 600;
   }
 
   .role-description {

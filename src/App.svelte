@@ -20,6 +20,7 @@
 
 <IntersectionObserver {element} bind:intersecting>
   <Header isIntersecting={intersecting} />
+  <div id="home" />
   <main>
     <Hero headerIsIntersecting={intersecting} />
     <div id="about" />

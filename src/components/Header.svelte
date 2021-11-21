@@ -1,6 +1,4 @@
 <script>
-  import { scrollto } from 'svelte-scrollto';
-
   export let isIntersecting;
   let navOpen = false;
 
@@ -8,35 +6,46 @@
     navOpen = !navOpen;
   };
 
-  const toggleNavAncor = function () {
-    navOpen = false;
-  };
-
   const toggleNavUl = function (e) {
-    if (e.target.classList.contains('main-nav-link')) {
+    if (
+      e.target.classList.contains('main-nav-link') ||
+      e.target.classList.contains('logo') ||
+      e.target.classList.contains('logo-mobile')
+    ) {
       e.preventDefault();
       const id = e.target.getAttribute('href');
-      document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
-      navOpen = false;
+
+      if (!id) {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+      }
+
+      if (id !== '#' && id.startsWith('#')) {
+        document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+        navOpen = false;
+      }
     }
   };
 </script>
 
-<header
-  id="home"
-  class="header"
-  class:nav-open={navOpen}
-  class:sticky={isIntersecting}
->
-  <nav class="main-nav" on:click={toggleNavUl}>
-    <div>
-      <a href="#home">
-        {#if !isIntersecting}
-          <img class="logo" alt="Dylan Thunn Logo" src="/img/logo.png" />
-        {:else}
-          <img class="logo" alt="Dylan Thunn Logo" src="/img/logo-dark.png" />
-        {/if}
-      </a>
+<header class="header" class:nav-open={navOpen} class:sticky={isIntersecting}>
+  <nav class="main-nav">
+    <div class="main-nav-link-logo" on:click={toggleNavUl}>
+      {#if !isIntersecting}
+        <a href={'#'}
+          ><img class="logo" alt="Dylan Thunn Logo" src="/img/logo.png" /></a
+        >
+      {:else}
+        <a href={'#'}
+          ><img
+            class="logo"
+            alt="Dylan Thunn Logo"
+            src="/img/logo-dark.png"
+          /></a
+        >
+      {/if}
     </div>
     <ul class="main-nav-list" on:click={toggleNavUl}>
       <li>
@@ -51,7 +60,7 @@
     </ul>
   </nav>
 
-  <a href={'#'}>
+  <a href={'#'} on:click={toggleNavUl}>
     {#if !isIntersecting}
       <img class="logo-mobile" alt="Dylan Thunn Logo" src="/img/logo.png" />
     {:else}

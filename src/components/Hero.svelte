@@ -4,7 +4,7 @@
   export let headerIsIntersecting;
 </script>
 
-<section class="hero" class:in-view={headerIsIntersecting}>
+<section id="#home" class="hero" class:in-view={headerIsIntersecting}>
   <div class="hero-container">
     <div class="hero-header-main">Dylan Thunn</div>
     <div class="hero-header-sub">Fullstack Developer / Lifelong Learner</div>

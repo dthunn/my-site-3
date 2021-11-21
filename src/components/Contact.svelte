@@ -32,7 +32,6 @@
       .then(() => {
         formSubmitted = true;
         disabled = false;
-        alert('successs');
       })
       .catch((err) => {
         formSubmitted = true;
