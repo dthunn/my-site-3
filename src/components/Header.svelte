@@ -11,6 +11,14 @@
   const toggleNavAncor = function () {
     navOpen = false;
   };
+
+  const toggleNavUl = function (e) {
+    // if (e.target.classList.contains('main-nav-link')) {
+    //   console.log(true);
+    //   navOpen = false;
+    // }
+    navOpen = false;
+  };
 </script>
 
 <header
@@ -39,16 +47,16 @@
         {/if}
       </a>
     </div>
-    <ul class="main-nav-list">
-      <li on:click={toggleNavAncor}>
+    <ul class="main-nav-list" on:click={toggleNavUl}>
+      <li class="main-nav-link">
         <a class="main-nav-link" href="#about" use:scrollto={'#about'}>About</a>
       </li>
-      <li on:click={toggleNavAncor}>
+      <li class="main-nav-link">
         <a class="main-nav-link" href="#skills" use:scrollto={'#skills'}
           >Skills</a
         >
       </li>
-      <li on:click={toggleNavAncor}>
+      <li class="main-nav-link">
         <a
           class="main-nav-link nav-cta"
           href="#contact"
