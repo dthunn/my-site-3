@@ -98,7 +98,7 @@
   /**************************/
 
   .header {
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     left: 0;
     display: flex;
