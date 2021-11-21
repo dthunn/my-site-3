@@ -27,7 +27,7 @@
   class:nav-open={navOpen}
   class:sticky={isIntersecting}
 >
-  <nav class="main-nav">
+  <nav class="main-nav" on:click={toggleNavUl}>
     <div>
       <a href="home">
         {#if !isIntersecting}
