@@ -8,9 +8,9 @@
     navOpen = !navOpen;
   };
 
-  // const toggleNavAncor = function () {
-  //   navOpen = false;
-  // };
+  const toggleNavAncor = function () {
+    navOpen = false;
+  };
 </script>
 
 <header
@@ -39,16 +39,16 @@
         {/if}
       </a>
     </div>
-    <ul class="main-nav-list">
-      <li on:click={toggleNav}>
+    <ul class="main-nav-list" on:click={toggleNavAncor}>
+      <li on:click={toggleNavAncor}>
         <a class="main-nav-link" href="#about" use:scrollto={'#about'}>About</a>
       </li>
-      <li on:click={toggleNav}>
+      <li on:click={toggleNavAncor}>
         <a class="main-nav-link" href="#skills" use:scrollto={'#skills'}
           >Skills</a
         >
       </li>
-      <li on:click={toggleNav}>
+      <li on:click={toggleNavAncor}>
         <a
           class="main-nav-link nav-cta"
           href="#contact"
@@ -262,7 +262,7 @@
       justify-content: center;
       transition: all 0.3s ease-in;
       opacity: 0;
-      pointer-events: none;
+      /* pointer-events: none; */
       visibility: hidden;
     }
 
