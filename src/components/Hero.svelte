@@ -25,7 +25,6 @@
     padding: 0 4.8rem;
     color: var(--color-white);
     margin-top: -8rem;
-    /* z-index: -1; */
   }
 
   .hero.in-view {
@@ -130,6 +129,8 @@
   @media (max-width: 59em) {
     .hero {
       height: 80vh;
+      background-size: cover;
+      background-position: top;
     }
 
     .hero-container {
