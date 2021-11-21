@@ -86,7 +86,7 @@
     margin: 0 auto;
     list-style: none;
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   ul li {
@@ -136,6 +136,7 @@
 
     .about-text {
       font-size: 1.4rem;
+      font-weight: 600;
     }
 
     .role-header {
