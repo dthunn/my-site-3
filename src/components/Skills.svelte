@@ -234,6 +234,10 @@
       font-size: 2.6rem;
     }
 
+    .skills-header-sub {
+      font-size: 2.2rem;
+    }
+
     .skills-icons {
       grid-template-columns: repeat(3, 1fr);
       width: 250px;
@@ -242,6 +246,42 @@
     .skills-icons-other {
       grid-template-columns: repeat(3, 1fr);
       width: 250px;
+    }
+  }
+
+  @media (max-width: 38em) {
+    .skills-header {
+      font-size: 2rem;
+    }
+
+    .skills-header-sub {
+      font-size: 1.6rem;
+    }
+
+    .skills-icons {
+      grid-template-columns: repeat(3, 1fr);
+      width: 230px;
+    }
+
+    .skills-icons-other {
+      grid-template-columns: repeat(3, 1fr);
+      width: 230px;
+    }
+  }
+
+  @media (max-width: 35em) {
+    .skills-header {
+      font-size: 2rem;
+    }
+
+    .skills-icons {
+      grid-template-columns: repeat(3, 1fr);
+      width: 190px;
+    }
+
+    .skills-icons-other {
+      grid-template-columns: repeat(3, 1fr);
+      width: 190px;
     }
   }
 </style>

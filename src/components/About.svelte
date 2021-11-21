@@ -70,6 +70,7 @@
     text-align: center;
     font-weight: 600;
     margin-bottom: 3rem;
+    letter-spacing: 1px;
   }
 
   .mern {
@@ -87,6 +88,8 @@
     list-style: none;
     font-size: 2rem;
     font-weight: 600;
+    white-space: nowrap;
+    letter-spacing: 1px;
   }
 
   ul li {
@@ -123,11 +126,19 @@
     .role-description {
       font-size: 1.8rem;
     }
+
+    ul li::before {
+      width: 2rem;
+    }
   }
 
   @media (max-width: 39em) {
     .about {
       padding: 0 4rem;
+    }
+
+    .siros {
+      display: inline-block;
     }
 
     .about-header {
@@ -146,6 +157,66 @@
 
     .role-description {
       font-size: 1.4rem;
+    }
+  }
+
+  @media (max-width: 39em) {
+    .about {
+      padding: 0 4rem;
+    }
+
+    .siros {
+      display: inline-block;
+    }
+
+    .about-header {
+      font-size: 2.4rem;
+    }
+
+    .about-text {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .role-header {
+      font-size: 1.6rem;
+      line-height: 1.6;
+    }
+
+    .role-description {
+      font-size: 1.4rem;
+      font-weight: 600;
+      white-space: normal;
+    }
+  }
+
+  @media (max-width: 22em) {
+    .about {
+      padding: 0 4rem;
+    }
+
+    .siros {
+      display: inline-block;
+    }
+
+    .about-header {
+      font-size: 1.6rem;
+    }
+
+    .about-text {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .role-header {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .role-description {
+      font-size: 1rem;
+      font-weight: 600;
+      white-space: nowrap;
     }
   }
 </style>

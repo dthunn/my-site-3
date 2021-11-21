@@ -154,10 +154,12 @@
   @media (max-width: 39em) {
     .hero {
       height: 75vh;
+      padding: 0 3rem;
     }
 
     .hero-header-main {
-      font-size: 5.2rem;
+      font-size: 4rem;
+      word-spacing: 1px;
     }
 
     .hero-header-sub {
@@ -166,6 +168,45 @@
 
     .hero-header-btn {
       font-size: 1.4rem;
+    }
+  }
+
+  @media (max-width: 39em) {
+    .hero-header-main {
+      font-size: 4rem;
+    }
+
+    .hero-header-sub {
+      font-size: 1rem;
+    }
+
+    .hero-header-btn {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 23em) {
+    .hero-header-main {
+      font-size: 4rem;
+    }
+
+    .hero-header-sub {
+      font-size: 1rem;
+    }
+
+    .hero-header-btn {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 20em) {
+    .hero-header-main {
+      font-size: 3.4rem;
+      word-spacing: 1px;
+    }
+
+    .hero-header-sub {
+      font-size: 0.8rem;
     }
   }
 </style>

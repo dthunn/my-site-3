@@ -23,4 +23,10 @@
     font-size: 2rem;
     font-weight: 500;
   }
+
+  @media (max-width: 39em) {
+    .footer-text {
+      font-size: 1.4rem;
+    }
+  }
 </style>
