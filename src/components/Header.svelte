@@ -15,7 +15,7 @@
 
 <header
   id="home"
-  class="header nav-open"
+  class="header"
   class:nav-open={navOpen}
   class:sticky={isIntersecting}
 >
