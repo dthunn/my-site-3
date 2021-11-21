@@ -31,37 +31,21 @@
     <div>
       <a href="home">
         {#if !isIntersecting}
-          <img
-            class="logo"
-            alt="Dylan Thunn Logo"
-            src="/img/logo.png"
-            use:scrollto={'#home'}
-          />
+          <img class="logo" alt="Dylan Thunn Logo" src="/img/logo.png" />
         {:else}
-          <img
-            class="logo"
-            alt="Dylan Thunn Logo"
-            src="/img/logo-dark.png"
-            use:scrollto={'#home'}
-          />
+          <img class="logo" alt="Dylan Thunn Logo" src="/img/logo-dark.png" />
         {/if}
       </a>
     </div>
     <ul class="main-nav-list" on:click={toggleNavUl}>
       <li class="main-nav-link">
-        <a class="main-nav-link" href="#about" use:scrollto={'#about'}>About</a>
+        <a class="main-nav-link" href="#about">About</a>
       </li>
       <li class="main-nav-link">
-        <a class="main-nav-link" href="#skills" use:scrollto={'#skills'}
-          >Skills</a
-        >
+        <a class="main-nav-link" href="#skills">Skills</a>
       </li>
       <li class="main-nav-link">
-        <a
-          class="main-nav-link nav-cta"
-          href="#contact"
-          use:scrollto={'#contact'}>Contact</a
-        >
+        <a class="main-nav-link nav-cta" href="#contact">Contact</a>
       </li>
     </ul>
   </nav>

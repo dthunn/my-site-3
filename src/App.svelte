@@ -12,10 +12,10 @@
   let element;
   let intersecting;
 
-  animateScroll.setGlobalOptions({
-    offset: -200,
-    duration: 700,
-  });
+  // animateScroll.setGlobalOptions({
+  //   offset: -200,
+  //   duration: 700,
+  // });
 </script>
 
 <IntersectionObserver {element} bind:intersecting>
