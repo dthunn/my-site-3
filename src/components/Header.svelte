@@ -8,9 +8,9 @@
     navOpen = !navOpen;
   };
 
-  const toggleNavAncor = function () {
-    navOpen = false;
-  };
+  // const toggleNavAncor = function () {
+  //   navOpen = false;
+  // };
 </script>
 
 <header
@@ -40,15 +40,15 @@
       </a>
     </div>
     <ul class="main-nav-list">
-      <li on:click={toggleNavAncor}>
+      <li on:click={toggleNav}>
         <a class="main-nav-link" href="#about" use:scrollto={'#about'}>About</a>
       </li>
-      <li on:click={toggleNavAncor}>
+      <li on:click={toggleNav}>
         <a class="main-nav-link" href="#skills" use:scrollto={'#skills'}
           >Skills</a
         >
       </li>
-      <li on:click={toggleNavAncor}>
+      <li on:click={toggleNav}>
         <a
           class="main-nav-link nav-cta"
           href="#contact"
