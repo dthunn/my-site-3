@@ -152,11 +152,11 @@
     }
 
     .hero-header-sub {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
 
     .hero-header-btn {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
   }
 </style>
