@@ -13,11 +13,12 @@
   };
 
   const toggleNavUl = function (e) {
-    // if (e.target.classList.contains('main-nav-link')) {
-    //   console.log(true);
-    //   navOpen = false;
-    // }
-    navOpen = false;
+    if (e.target.classList.contains('main-nav-link')) {
+      e.preventDefault();
+      const id = e.target.getAttribute('href');
+      document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+      navOpen = false;
+    }
   };
 </script>
 
@@ -38,13 +39,13 @@
       </a>
     </div>
     <ul class="main-nav-list" on:click={toggleNavUl}>
-      <li class="main-nav-link">
+      <li>
         <a class="main-nav-link" href="#about">About</a>
       </li>
-      <li class="main-nav-link">
+      <li>
         <a class="main-nav-link" href="#skills">Skills</a>
       </li>
-      <li class="main-nav-link">
+      <li>
         <a class="main-nav-link nav-cta" href="#contact">Contact</a>
       </li>
     </ul>
