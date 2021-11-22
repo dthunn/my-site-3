@@ -22,7 +22,7 @@
     </h3>
     <div class="role-list">
       <ul class="role-description">
-        <li>Created frontend GUI in React.</li>
+        <li>Frontend GUI in React.</li>
         <li>Auth with Node, Expess, JWT, and Mongo.</li>
         <li>Creating and saving user projects.</li>
         <li>Deployment with Docker and Azure.</li>
