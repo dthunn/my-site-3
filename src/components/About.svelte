@@ -13,7 +13,8 @@
       graphic design because of a background in art, I never really felt it was
       meant for me. Then a friend of mine recommended I try coding a few years
       ago and I have never looked back. When not coding, I enjoy hiking with my
-      dog, seeing live music, and being lazy and playing video games 😁.
+      dog, seeing live music, or just chilling and playing video games or
+      watching some anime.
     </p>
     <h3 class="role-header">
       Current Role - <span class="mern">MERN</span> Stack Developer at
