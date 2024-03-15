@@ -1,13 +1,13 @@
 <script>
-  import { scrollto } from 'svelte-scrollto';
+  import { scrollto } from 'svelte-scrollto'
 
-  export let headerIsIntersecting;
+  export let headerIsIntersecting
 </script>
 
 <section id="#home" class="hero" class:in-view={headerIsIntersecting}>
   <div class="hero-container">
     <div class="hero-header-main">Dylan Thunn</div>
-    <div class="hero-header-sub">Fullstack Developer / Lifelong Learner</div>
+    <div class="hero-header-sub">Software Developer / Lifelong Learner</div>
     <div>
       <button class="hero-header-btn btn-scroll-to" use:scrollto={'#about'}>
         Learn more &DownArrow;

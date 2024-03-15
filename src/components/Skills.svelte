@@ -1,21 +1,22 @@
 <script>
-  import IntersectionObserver from 'svelte-intersection-observer';
+  import IntersectionObserver from 'svelte-intersection-observer'
 
-  import RustIcon from '../../public/img/rust.svg';
-  import MongoIcon from '../../public/img/mongo.svg';
-  import PostgresIcon from '../../public/img/postgres.svg';
-  import TSIcon from '../../public/img/typescript.svg';
-  import AWSIcon from '../../public/img/aws.svg';
-  import AzureIcon from '../../public/img/azure.svg';
-  import DOIcon from '../../public/img/digitalocean.svg';
-  import GQLIcon from '../../public/img/gql.svg';
-  import JestIcon from '../../public/img/jest.svg';
-  import FigmaIcon from '../../public/img/figma.svg';
-  import NetlifyIcon from '../../public/img/netlify.svg';
-  import SvelteIcon from '../../public/img/svelte.svg';
+  import RustIcon from '../../public/img/rust.svg'
+  import MongoIcon from '../../public/img/mongo.svg'
+  import PostgresIcon from '../../public/img/postgres.svg'
+  import TSIcon from '../../public/img/typescript.svg'
+  import AWSIcon from '../../public/img/aws.svg'
+  import AzureIcon from '../../public/img/azure.svg'
+  import DOIcon from '../../public/img/digitalocean.svg'
+  import GQLIcon from '../../public/img/gql.svg'
+  import JestIcon from '../../public/img/jest.svg'
+  import FigmaIcon from '../../public/img/figma.svg'
+  import NetlifyIcon from '../../public/img/netlify.svg'
+  import SvelteIcon from '../../public/img/svelte.svg'
+  import JavaIcon from '../../public/img/java.svg'
 
-  let element;
-  let intersecting;
+  let element
+  let intersecting
 </script>
 
 <IntersectionObserver {element} bind:intersecting once>
@@ -35,49 +36,34 @@
         <div class="skills-icon postgres">
           {@html TSIcon}
         </div>
-        <ion-icon name="logo-npm" class="skills-icon npm" />
         <ion-icon name="logo-github" class="skills-icon github" />
         <ion-icon name="logo-react" class="skills-icon react" />
-        <ion-icon name="logo-docker" class="skills-icon docker" />
+        <ion-icon name="logo-angular" class="skills-icon npm" />
         <div class=" skills-icon mongo">
-          {@html MongoIcon}
+          {@html JavaIcon}
         </div>
-        <div class="skills-icon jest">
-          {@html JestIcon}
+        <div class="skills-icon postgres">
+          {@html PostgresIcon}
         </div>
-      </div>
-      <div class="skills-header-sub">Other Interests and Tools</div>
-      <div class="skills-icons-other">
         <div class="skills-icon rust">
           {@html RustIcon}
         </div>
-        <div class="skills-icon svelte">
-          {@html SvelteIcon}
-        </div>
-        <div class="skills-icon graphql">
-          {@html GQLIcon}
-        </div>
-        <div class="skills-icon figma">
-          {@html FigmaIcon}
-        </div>
+        <ion-icon name="logo-docker" class="skills-icon docker" />
         <div class="skills-icon aws">
           {@html AWSIcon}
         </div>
         <div class="skills-icon azure">
           {@html AzureIcon}
         </div>
-        <div class="skills-icon postgres">
-          {@html PostgresIcon}
+        <div class="skills-icon figma">
+          {@html FigmaIcon}
         </div>
-        <div class="skills-icon do">
-          {@html DOIcon}
+        <div class="skills-icon figma">
+          {@html MongoIcon}
         </div>
-        <div class="skills-icon netlify">
-          {@html NetlifyIcon}
+        <div class="skills-icon graphql">
+          {@html GQLIcon}
         </div>
-        <ion-icon name="logo-angular" class="skills-icon angular" />
-        <ion-icon name="logo-vercel" class="skills-icon vercel" />
-        <ion-icon name="logo-python" class="skills-icon python" />
       </div>
     </div>
   </section>
@@ -120,7 +106,6 @@
     width: 700px;
     margin: 0 auto;
     row-gap: 2rem;
-    margin-bottom: 10rem;
   }
 
   .skills-icon {

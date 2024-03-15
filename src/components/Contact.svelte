@@ -1,28 +1,28 @@
 <script>
-  import IntersectionObserver from 'svelte-intersection-observer';
+  import IntersectionObserver from 'svelte-intersection-observer'
 
-  let element;
-  let intersecting;
-  let disabled = false;
-  let formSubmitted = false;
-  let error = false;
+  let element
+  let intersecting
+  let disabled = false
+  let formSubmitted = false
+  let error = false
   let formValues = {
     name: '',
     email: '',
     message: '',
-  };
+  }
 
   const encode = (data) => {
     return Object.keys(data)
       .map(
         (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
       )
-      .join('&');
-  };
+      .join('&')
+  }
 
   const handleSubmit = function (e) {
-    e.preventDefault();
-    disabled = true;
+    e.preventDefault()
+    disabled = true
 
     fetch('/', {
       method: 'POST',
@@ -30,14 +30,14 @@
       body: encode({ 'form-name': 'contact', ...formValues }),
     })
       .then(() => {
-        formSubmitted = true;
-        disabled = false;
+        formSubmitted = true
+        disabled = false
       })
       .catch((err) => {
-        formSubmitted = true;
-        error = true;
-        disabled = false;
-      });
+        formSubmitted = true
+        error = true
+        disabled = false
+      })
   };
 </script>
 
@@ -46,9 +46,10 @@
     <div class="contact-info">
       <h3 class="contact-info-header">A bit more info...</h3>
       <p class="contact-info-text">
-        Check out my Github to see what projects I have worked on or take a peek
-        at my resume below if your looking for a new developer. To reach me,
-        feel free to use the email below or just use the contact form!
+        Please review my resume to see my work history, or visit my GitHub
+        profile to explore the personal projects I have worked on if you are in
+        search of a new developer. To contact me, feel free to use the email
+        provided below or utilize the contact form for your convenience.
       </p>
       <div class="contact-info-items">
         <div class="contact-info-item">

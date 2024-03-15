@@ -1,35 +1,25 @@
 <script>
-  import IntersectionObserver from 'svelte-intersection-observer';
+  import IntersectionObserver from 'svelte-intersection-observer'
 
-  let element;
-  let intersecting;
+  let element
+  let intersecting
 </script>
 
 <IntersectionObserver {element} bind:intersecting once>
   <section class="about" bind:this={element} class:in-view={intersecting}>
     <h2 class="about-header">A little about me...</h2>
     <p class="about-text">
-      I am a graphic designer turned fullstack developer. After getting into
-      graphic design because of a background in art, I never really felt it was
-      meant for me. Then a friend of mine recommended I try coding a few years
-      ago and I have never looked back. When not coding, I enjoy hiking with my
-      dog, seeing live music, or just chilling and playing video games or
-      watching some anime.
+      As an adept software developer, I possess a talent for crafting
+      sophisticated solutions to complex problems. With a solid command of
+      various programming languages and frameworks, I have honed my expertise in
+      translating abstract concepts into intuitive, user-focused applications.
+      My proficiency extends across various domains, including front-end
+      development, back-end engineering, database management, and the entirety
+      of the software development lifecycle – from initial planning to
+      deployment and beyond. Fueled by a passionate commitment to advancing
+      technology, I am dedicated to spearheading innovations that redefine and
+      elevate user experiences.
     </p>
-    <h3 class="role-header">
-      Current Role - <span class="mern">MERN</span> Stack Developer at
-      <span class="siros">Siros Technologies</span>
-    </h3>
-    <div class="role-list">
-      <ul class="role-description">
-        <li>Frontend GUI in React.</li>
-        <li>Auth with Node, Expess, JWT, and Mongo.</li>
-        <li>Creating and saving user projects.</li>
-        <li>Deployment with Docker and Azure.</li>
-        <li>Testing with Jest and Supertest.</li>
-        <li>Data visualization.</li>
-      </ul>
-    </div>
   </section>
 </IntersectionObserver>
 
