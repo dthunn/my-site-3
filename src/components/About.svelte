@@ -14,11 +14,9 @@
       various programming languages and frameworks, I have honed my expertise in
       translating abstract concepts into intuitive, user-focused applications.
       My proficiency extends across various domains, including front-end
-      development, back-end engineering, database management, and the entirety
-      of the software development lifecycle – from initial planning to
-      deployment and beyond. Fueled by a passionate commitment to advancing
-      technology, I am dedicated to spearheading innovations that redefine and
-      elevate user experiences.
+      development, back-end engineering, database management, and much more.
+      Fueled by a passionate commitment to advancing technology, I am dedicated
+      to spearheading innovations that redefine and elevate user experiences.
     </p>
   </section>
 </IntersectionObserver>
