@@ -9,7 +9,7 @@
   <section class="about" bind:this={element} class:in-view={intersecting}>
     <h2 class="about-header">A little about me...</h2>
     <p class="about-text">
-      As an adept software developer, I possess a talent for crafting
+      As an experienced software developer, I possess a talent for crafting
       sophisticated solutions to complex problems. With a solid command of
       various programming languages and frameworks, I have honed my expertise in
       translating abstract concepts into intuitive, user-focused applications.

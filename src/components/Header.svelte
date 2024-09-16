@@ -1,10 +1,10 @@
 <script>
-  export let isIntersecting;
-  let navOpen = false;
+  export let isIntersecting
+  let navOpen = false
 
   const toggleNav = function () {
-    navOpen = !navOpen;
-  };
+    navOpen = !navOpen
+  }
 
   const toggleNavUl = function (e) {
     if (
@@ -12,22 +12,22 @@
       e.target.classList.contains('logo') ||
       e.target.classList.contains('logo-mobile')
     ) {
-      e.preventDefault();
-      const id = e.target.getAttribute('href');
+      e.preventDefault()
+      const id = e.target.getAttribute('href')
 
       if (!id) {
         window.scrollTo({
           top: 0,
           behavior: 'smooth',
-        });
+        })
       }
 
       if (id !== '#' && id.startsWith('#')) {
-        document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
-        navOpen = false;
+        document.querySelector(id).scrollIntoView({ behavior: 'smooth' })
+        navOpen = false
       }
     }
-  };
+  }
 </script>
 
 <header class="header" class:nav-open={navOpen} class:sticky={isIntersecting}>
