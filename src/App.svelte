@@ -1,5 +1,4 @@
 <script>
-  import * as animateScroll from 'svelte-scrollto';
   import IntersectionObserver from 'svelte-intersection-observer';
 
   import Header from './components/Header.svelte';
@@ -10,12 +9,7 @@
   import Footer from './components/Footer.svelte';
 
   let element;
-  let intersecting;
-
-  // animateScroll.setGlobalOptions({
-  //   offset: -200,
-  //   duration: 700,
-  // });
+  let intersecting = false;
 </script>
 
 <IntersectionObserver {element} bind:intersecting>

@@ -1,7 +1,9 @@
 <script>
-  import { scrollto } from 'svelte-scrollto'
-
   export let headerIsIntersecting
+
+  function scrollToAbout() {
+    document.querySelector('#about').scrollIntoView({ behavior: 'smooth' })
+  }
 </script>
 
 <section id="#home" class="hero" class:in-view={headerIsIntersecting}>
@@ -9,7 +11,7 @@
     <div class="hero-header-main">Dylan Thunn</div>
     <div class="hero-header-sub">Software Developer / Lifelong Learner</div>
     <div>
-      <button class="hero-header-btn btn-scroll-to" use:scrollto={'#about'}>
+      <button class="hero-header-btn btn-scroll-to" on:click={scrollToAbout}>
         Learn more &DownArrow;
       </button>
     </div>

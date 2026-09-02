@@ -2,7 +2,7 @@
   import IntersectionObserver from 'svelte-intersection-observer'
 
   let element
-  let intersecting
+  let intersecting = false
   let disabled = false
   let formSubmitted = false
   let error = false

@@ -2,7 +2,7 @@
   import IntersectionObserver from 'svelte-intersection-observer'
 
   let element
-  let intersecting
+  let intersecting = false
 </script>
 
 <IntersectionObserver {element} bind:intersecting once>

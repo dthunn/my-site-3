@@ -16,7 +16,7 @@
   import JavaIcon from '../../public/img/java.svg'
 
   let element
-  let intersecting
+  let intersecting = false
 </script>
 
 <IntersectionObserver {element} bind:intersecting once>
