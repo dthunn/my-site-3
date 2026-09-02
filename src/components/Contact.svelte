@@ -46,10 +46,11 @@
     <div class="contact-info">
       <h3 class="contact-info-header">A bit more info...</h3>
       <p class="contact-info-text">
-        Please review my resume to see my work history, or visit my GitHub
-        profile to explore the personal projects I have worked on if you are in
-        search of a new developer. To contact me, feel free to use the email
-        provided below or utilize the contact form for your convenience.
+        Take a look at my resume for the full work history, browse my GitHub
+        for some of the projects I've built outside of work, or connect with
+        me on LinkedIn. Feel free to reach out directly by email, or send a
+        note through the form below, I'm always happy to talk shop or
+        hear about new opportunities.
       </p>
       <div class="contact-info-items">
         <div class="contact-info-item">
