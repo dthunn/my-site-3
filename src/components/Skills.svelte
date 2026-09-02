@@ -111,6 +111,11 @@
   .skills-icon {
     height: 5.2rem;
     width: 5.2rem;
+    transition: transform 0.25s ease-out;
+  }
+
+  .skills-icon:hover {
+    transform: scale(1.15);
   }
 
   .skills-icon.css {
@@ -145,38 +150,19 @@
     color: var(--color-primary-light);
   }
 
-  .skills-icon.angular {
-    color: var(--color-red);
-  }
-
-  .skills-icon.python {
-    color: var(--color-yellow);
-  }
-
-  .skills-icon.vercel {
-    color: var(--color-white);
-  }
-
   .skills-icon.aws {
     fill: var(--color-secondary);
-  }
-
-  .skills-icon.do {
-    fill: var(--color-primary-light);
-  }
-
-  .skills-header-sub {
-    font-size: 2.2rem;
-    text-align: center;
-    color: var(--color-white);
-    margin-bottom: 5rem;
-    font-weight: 500;
   }
 
   .html {
     height: 4.8rem;
     width: 4.8rem;
     color: var(--color-secondary);
+    transition: transform 0.25s ease-out;
+  }
+
+  .html:hover {
+    transform: scale(1.15);
   }
 
   .rust {
@@ -193,22 +179,8 @@
     color: red;
   }
 
-  .skills-icons-other {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    justify-items: center;
-    width: 700px;
-    margin: 0 auto;
-    row-gap: 2.5rem;
-  }
-
   @media (max-width: 59em) {
     .skills-icons {
-      grid-template-columns: repeat(4, 1fr);
-      width: 550px;
-    }
-
-    .skills-icons-other {
       grid-template-columns: repeat(4, 1fr);
       width: 550px;
     }
@@ -219,16 +191,7 @@
       font-size: 2.6rem;
     }
 
-    .skills-header-sub {
-      font-size: 2.2rem;
-    }
-
     .skills-icons {
-      grid-template-columns: repeat(3, 1fr);
-      width: 250px;
-    }
-
-    .skills-icons-other {
       grid-template-columns: repeat(3, 1fr);
       width: 250px;
     }
@@ -239,16 +202,7 @@
       font-size: 2rem;
     }
 
-    .skills-header-sub {
-      font-size: 1.6rem;
-    }
-
     .skills-icons {
-      grid-template-columns: repeat(3, 1fr);
-      width: 230px;
-    }
-
-    .skills-icons-other {
       grid-template-columns: repeat(3, 1fr);
       width: 230px;
     }
@@ -260,11 +214,6 @@
     }
 
     .skills-icons {
-      grid-template-columns: repeat(3, 1fr);
-      width: 190px;
-    }
-
-    .skills-icons-other {
       grid-template-columns: repeat(3, 1fr);
       width: 190px;
     }

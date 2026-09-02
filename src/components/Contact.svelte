@@ -71,6 +71,14 @@
           >
         </div>
         <div class="contact-info-item">
+          <ion-icon name="logo-linkedin" class="contact-icon" />
+          <a
+            href="https://www.linkedin.com/in/dylan-thunn-denver/"
+            class="contact-link"
+            target="_blank">LinkedIn</a
+          >
+        </div>
+        <div class="contact-info-item">
           <ion-icon name="location-outline" class="contact-icon" />
           <h4>Denver, CO</h4>
         </div>
@@ -262,6 +270,8 @@
   .contact-form-btn:hover {
     background-color: var(--color-secondary-dark);
     color: var(--color-white);
+    transform: translateY(-2px);
+    box-shadow: 0 0.6rem 1.4rem rgba(0, 0, 0, 0.25);
   }
 
   .form-submitted-text {

@@ -2,7 +2,7 @@
 
 <footer class="footer">
   <div class="footer-text">
-    Copyright © Dylan Thunn {new Date().getFullYear()}
+    © Dylan Thunn {new Date().getFullYear()}
   </div>
 </footer>
 

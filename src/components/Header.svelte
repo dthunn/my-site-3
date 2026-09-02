@@ -159,11 +159,14 @@
     border-radius: 22px;
     color: #fff;
     background-color: #e67e22;
+    transition: all 0.3s;
   }
 
   .main-nav-link.nav-cta:hover,
   .main-nav-link.nav-cta:active {
     background-color: var(--color-secondary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.15);
   }
 
   /* MOBILE */

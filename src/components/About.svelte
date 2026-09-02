@@ -9,21 +9,39 @@
   <section class="about" bind:this={element} class:in-view={intersecting}>
     <h2 class="about-header">A little about me...</h2>
     <p class="about-text">
-      As an experienced software developer, I possess a talent for crafting
-      sophisticated solutions to complex problems. With a solid command of
-      various programming languages and frameworks, I have honed my expertise in
-      translating abstract concepts into intuitive, user-focused applications.
-      My proficiency extends across various domains, including front-end
-      development, back-end engineering, database management, and much more.
-      Fueled by a passionate commitment to advancing technology, I am dedicated
-      to spearheading innovations that redefine and elevate user experiences.
+      I'm a software engineer with 5+ years of experience building
+      production-grade web applications, from frontend work
+      to backend services and the cloud infrastructure that keeps it all
+      running. My day-to-day toolkit spans JavaScript/TypeScript, React,
+      Angular, Java, Node.js, Python, PostgreSQL, AWS, Docker/Kubernetes, among others.
+    </p>
+    <p class="about-text">
+      Most recently, I worked on mission-critical ground operations software
+      at Jeppesen ForeFlight, used by major U.S. and international airlines
+      for flight planning and operational safety. That meant Angular on the
+      frontend, Java microservices running on Kubernetes, ETL pipelines in
+      Python and Argo Workflows, and GIS interfaces built with ArcGIS &mdash;
+      plus contributing to the team's migration from Azure to AWS along the
+      way.
+    </p>
+    <p class="about-text">
+      Before that, I built automation tools inside PayPal's microservices
+      architecture, shipped full-stack MERN applications, built frontend
+      experiences with Next.js and Contentful, and worked on geospatial
+      applications using React and CesiumJS.
+    </p>
+    <p class="about-text">
+      I like problems that don't fit neatly into one layer of the stack, and
+      I'm happiest owning something end-to-end &mdash; from the API design to
+      the pixels the user actually sees. If you're looking for someone who can
+      move fluidly between frontend, backend, and cloud, let's talk.
     </p>
   </section>
 </IntersectionObserver>
 
 <style>
   .about {
-    max-width: 1000px;
+    max-width: 760px;
     margin: 10rem auto;
     color: var(--color-primary);
     padding: 0 4.8rem;
@@ -39,59 +57,22 @@
 
   .about-header {
     font-size: 3.2rem;
-    text-align: center;
     margin-bottom: 3rem;
     font-weight: 400;
     color: var(--color-secondary-dark);
   }
 
   .about-text {
-    text-align: center;
-    font-size: 2rem;
-    line-height: 1.6;
-    font-weight: 600;
+    text-align: left;
+    font-size: 1.8rem;
+    line-height: 1.7;
+    font-weight: 500;
+    margin-bottom: 2.4rem;
+    letter-spacing: 0.5px;
+  }
+
+  .about-text:last-child {
     margin-bottom: 6rem;
-    letter-spacing: 1px;
-  }
-
-  .role-header {
-    font-size: 2.4rem;
-    text-align: center;
-    font-weight: 600;
-    margin-bottom: 3rem;
-    letter-spacing: 1px;
-  }
-
-  .mern {
-    color: var(--color-secondary-dark);
-  }
-
-  .role-list {
-    display: flex;
-    justify-content: center;
-    font-weight: 600;
-  }
-
-  .role-description {
-    margin: 0 auto;
-    list-style: none;
-    font-size: 2rem;
-    font-weight: 600;
-    white-space: nowrap;
-    letter-spacing: 1px;
-  }
-
-  ul li {
-    margin-bottom: 1rem;
-  }
-
-  ul li::before {
-    content: '\2022';
-    display: inline-block;
-    color: var(--color-secondary-dark);
-    font-weight: bold;
-    margin-left: -1rem;
-    width: 5rem;
   }
 
   @media (max-width: 59em) {
@@ -100,24 +81,7 @@
     }
 
     .about-text {
-      font-size: 1.8rem;
-    }
-
-    .siros {
-      display: block;
-    }
-
-    .role-header {
-      font-size: 2rem;
-      line-height: 1.6;
-    }
-
-    .role-description {
-      font-size: 1.8rem;
-    }
-
-    ul li::before {
-      width: 2rem;
+      font-size: 1.7rem;
     }
   }
 
@@ -126,56 +90,13 @@
       padding: 0 4rem;
     }
 
-    .siros {
-      display: inline-block;
-    }
-
     .about-header {
       font-size: 2.4rem;
     }
 
     .about-text {
       font-size: 1.4rem;
-      font-weight: 600;
-    }
-
-    .role-header {
-      font-size: 1.6rem;
-      line-height: 1.6;
-    }
-
-    .role-description {
-      font-size: 1.4rem;
-    }
-  }
-
-  @media (max-width: 39em) {
-    .about {
-      padding: 0 4rem;
-    }
-
-    .siros {
-      display: inline-block;
-    }
-
-    .about-header {
-      font-size: 2.4rem;
-    }
-
-    .about-text {
-      font-size: 1.4rem;
-      font-weight: 600;
-    }
-
-    .role-header {
-      font-size: 1.6rem;
-      line-height: 1.6;
-    }
-
-    .role-description {
-      font-size: 1.4rem;
-      font-weight: 600;
-      white-space: normal;
+      font-weight: 500;
     }
   }
 
@@ -184,28 +105,13 @@
       padding: 0 4rem;
     }
 
-    .siros {
-      display: inline-block;
-    }
-
     .about-header {
       font-size: 1.6rem;
     }
 
     .about-text {
       font-size: 1rem;
-      font-weight: 600;
-    }
-
-    .role-header {
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    .role-description {
-      font-size: 1rem;
-      font-weight: 600;
-      white-space: nowrap;
+      font-weight: 500;
     }
   }
 </style>

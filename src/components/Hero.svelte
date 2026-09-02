@@ -82,6 +82,7 @@
 
   .hero-header-btn:hover {
     color: var(--color-secondary-dark);
+    transform: translateY(-2px);
   }
 
   @keyframes moveInLeft {
