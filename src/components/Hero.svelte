@@ -19,7 +19,7 @@
         class="hero-prompt-sep">:~$</span
       > cat role.txt
     </div>
-    <div class="hero-header-sub">Software Developer / Lifelong Learner</div>
+    <div class="hero-header-sub">Software Engineer / Lifelong Learner</div>
     <div>
       <button class="hero-header-btn btn-scroll-to" on:click={scrollToAbout}>
         Learn more &DownArrow;
