@@ -117,7 +117,22 @@
     border-radius: 6px;
     overflow: hidden;
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transform: translateY(3rem);
     transition: all 0.3s ease-in-out;
+  }
+
+  .in-view .portfolio-card {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .portfolio-card:nth-child(1) {
+    transition-delay: 0.15s;
+  }
+
+  .portfolio-card:nth-child(2) {
+    transition-delay: 0.3s;
   }
 
   .portfolio-card:hover {

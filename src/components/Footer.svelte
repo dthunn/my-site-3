@@ -8,7 +8,7 @@
 
 <style>
   footer {
-    background-color: var(--color-primary);
+    background-color: var(--color-white);
   }
 
   .footer {
@@ -19,7 +19,7 @@
   }
 
   .footer-text {
-    color: var(--color-white);
+    color: var(--color-primary);
     font-size: 2rem;
     font-weight: 500;
   }

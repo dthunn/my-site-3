@@ -52,10 +52,10 @@
         <a class="main-nav-link" href="#about">About</a>
       </li>
       <li>
-        <a class="main-nav-link" href="#portfolio">Portfolio</a>
+        <a class="main-nav-link" href="#skills">Skills</a>
       </li>
       <li>
-        <a class="main-nav-link" href="#skills">Skills</a>
+        <a class="main-nav-link" href="#portfolio">Portfolio</a>
       </li>
       <li>
         <a class="main-nav-link nav-cta" href="#contact">Contact</a>

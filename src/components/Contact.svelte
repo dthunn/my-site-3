@@ -42,7 +42,8 @@
 </script>
 
 <IntersectionObserver {element} bind:intersecting once>
-  <section class="contact" bind:this={element} class:in-view={intersecting}>
+  <section class="contact-section">
+    <div class="contact" bind:this={element} class:in-view={intersecting}>
     <div class="contact-info">
       <h3 class="contact-info-header">A bit more info...</h3>
       <p class="contact-info-text">
@@ -142,15 +143,22 @@
         </div>
       {/if}
     </div>
+    </div>
   </section>
 </IntersectionObserver>
 
 <style>
+  .contact-section {
+    background-color: var(--color-primary);
+    padding: 12rem 0;
+  }
+
   .contact {
-    margin: 12rem auto;
+    margin: 0 auto;
     max-width: 1000px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    align-items: center;
     gap: 2rem;
     padding: 0 4.8rem;
     transform: translateY(8rem);
@@ -172,7 +180,7 @@
   .contact-info-header {
     padding-top: 1.6rem;
     font-size: 3rem;
-    color: var(--color-secondary-dark);
+    color: var(--color-secondary);
     margin-bottom: 1rem;
     font-weight: 400;
   }
@@ -181,7 +189,7 @@
     font-size: 2rem;
     line-height: 1.6;
     font-weight: 600;
-    color: var(--color-primary);
+    color: var(--color-white);
     width: 98%;
     margin-bottom: 1.6rem;
     letter-spacing: 1px;
@@ -192,7 +200,7 @@
     align-items: center;
     font-size: 2rem;
     font-weight: 600;
-    color: var(--color-primary);
+    color: var(--color-white);
     margin-bottom: 1rem;
     white-space: nowrap;
     letter-spacing: 1px;
@@ -218,9 +226,9 @@
   }
 
   .contact-form {
-    border: 4px solid var(--color-primary);
-    color: var(--color-secondary);
-    background-color: var(--color-primary);
+    border-radius: 6px;
+    color: var(--color-primary);
+    background-color: var(--color-white);
     padding: 1.6rem 0 2rem 0;
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
     min-height: 28rem;
@@ -239,7 +247,7 @@
   .contact-form-header {
     font-size: 3rem;
     padding: 0 3rem;
-    background-color: var(--color-primary);
+    background-color: var(--color-white);
     margin-bottom: 1rem;
   }
 
@@ -249,7 +257,7 @@
     margin-bottom: 0.5rem;
     padding: 0.5rem 1rem;
     border-radius: 3px;
-    border: none;
+    border: 1px solid var(--color-primary-light);
     color: var(--color-primary);
     font-weight: 500;
     font-size: 2rem;
@@ -311,8 +319,8 @@
     }
 
     @media (max-width: 39em) {
-      .contact {
-        margin: 10rem auto;
+      .contact-section {
+        padding: 10rem 0;
       }
       .contact-info-header {
         font-size: 2.4rem;

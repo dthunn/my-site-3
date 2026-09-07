@@ -20,11 +20,11 @@
     <Hero headerIsIntersecting={intersecting} />
     <div id="about" />
     <About />
-    <div id="portfolio" />
-    <Portfolio />
+    <div id="skills" />
+    <Skills />
     <div bind:this={element}>
-      <div id="skills" />
-      <Skills />
+      <div id="portfolio" />
+      <Portfolio />
       <div id="contact" />
       <Contact />
     </div>
