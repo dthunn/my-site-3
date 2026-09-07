@@ -52,6 +52,9 @@
         <a class="main-nav-link" href="#about">About</a>
       </li>
       <li>
+        <a class="main-nav-link" href="#portfolio">Portfolio</a>
+      </li>
+      <li>
         <a class="main-nav-link" href="#skills">Skills</a>
       </li>
       <li>
