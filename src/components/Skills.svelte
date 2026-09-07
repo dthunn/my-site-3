@@ -1,19 +1,30 @@
 <script>
   import IntersectionObserver from 'svelte-intersection-observer'
 
-  import RustIcon from '../../public/img/rust.svg'
   import MongoIcon from '../../public/img/mongo.svg'
   import PostgresIcon from '../../public/img/postgres.svg'
   import TSIcon from '../../public/img/typescript.svg'
   import AWSIcon from '../../public/img/aws.svg'
   import AzureIcon from '../../public/img/azure.svg'
-  import DOIcon from '../../public/img/digitalocean.svg'
   import GQLIcon from '../../public/img/gql.svg'
-  import JestIcon from '../../public/img/jest.svg'
-  import FigmaIcon from '../../public/img/figma.svg'
-  import NetlifyIcon from '../../public/img/netlify.svg'
-  import SvelteIcon from '../../public/img/svelte.svg'
   import JavaIcon from '../../public/img/java.svg'
+  import PythonIcon from 'devicon/icons/python/python-original.svg'
+  import KubernetesIcon from 'simple-icons/icons/kubernetes.svg'
+  import RedisIcon from 'simple-icons/icons/redis.svg'
+  import ExpressIcon from 'simple-icons/icons/express.svg'
+  import SpringBootIcon from 'simple-icons/icons/springboot.svg'
+  import ReduxIcon from 'simple-icons/icons/redux.svg'
+  import ClaudeIcon from 'simple-icons/icons/claude.svg'
+  import ArgoIcon from 'simple-icons/icons/argo.svg'
+  import MCPIcon from 'simple-icons/icons/modelcontextprotocol.svg'
+  import HTML5Icon from 'simple-icons/icons/html5.svg'
+  import CSS3Icon from 'simple-icons/icons/css.svg'
+  import JSIcon from 'simple-icons/icons/javascript.svg'
+  import NodeIcon from 'simple-icons/icons/nodedotjs.svg'
+  import GithubIcon from 'simple-icons/icons/github.svg'
+  import ReactIcon from 'simple-icons/icons/react.svg'
+  import AngularIcon from 'simple-icons/icons/angular.svg'
+  import DockerIcon from 'simple-icons/icons/docker.svg'
 
   let element
   let intersecting = false
@@ -28,41 +39,77 @@
     >
       <h2 class="skills-header">Main Tech and Tools</h2>
       <div class="skills-icons">
-        <ion-icon name="logo-html5" class="html" />
-        <ion-icon name="logo-css3" class="skills-icon css" />
-        <ion-icon name="logo-sass" class="skills-icon sass" />
-        <ion-icon name="logo-javascript" class="skills-icon js" />
-        <ion-icon name="logo-nodejs" class="skills-icon node" />
-        <div class="skills-icon postgres">
+        <div class="skills-icon html" data-tooltip="HTML5">
+          {@html HTML5Icon}
+        </div>
+        <div class="skills-icon css" data-tooltip="CSS3">
+          {@html CSS3Icon}
+        </div>
+        <div class="skills-icon js" data-tooltip="JavaScript">
+          {@html JSIcon}
+        </div>
+        <div class="skills-icon node" data-tooltip="Node.js">
+          {@html NodeIcon}
+        </div>
+        <div class="skills-icon ts" data-tooltip="TypeScript">
           {@html TSIcon}
         </div>
-        <ion-icon name="logo-github" class="skills-icon github" />
-        <ion-icon name="logo-react" class="skills-icon react" />
-        <ion-icon name="logo-angular" class="skills-icon npm" />
-        <div class=" skills-icon mongo">
+        <div class="skills-icon github" data-tooltip="GitHub">
+          {@html GithubIcon}
+        </div>
+        <div class="skills-icon react" data-tooltip="React">
+          {@html ReactIcon}
+        </div>
+        <div class="skills-icon angular" data-tooltip="Angular">
+          {@html AngularIcon}
+        </div>
+        <div class="skills-icon java" data-tooltip="Java">
           {@html JavaIcon}
         </div>
-        <div class="skills-icon postgres">
+        <div class="skills-icon postgres" data-tooltip="PostgreSQL">
           {@html PostgresIcon}
         </div>
-        <div class="skills-icon rust">
-          {@html RustIcon}
+        <div class="skills-icon docker" data-tooltip="Docker">
+          {@html DockerIcon}
         </div>
-        <ion-icon name="logo-docker" class="skills-icon docker" />
-        <div class="skills-icon aws">
+        <div class="skills-icon aws" data-tooltip="AWS">
           {@html AWSIcon}
         </div>
-        <div class="skills-icon azure">
+        <div class="skills-icon azure" data-tooltip="Azure">
           {@html AzureIcon}
         </div>
-        <div class="skills-icon figma">
-          {@html FigmaIcon}
-        </div>
-        <div class="skills-icon figma">
+        <div class="skills-icon mongo" data-tooltip="MongoDB">
           {@html MongoIcon}
         </div>
-        <div class="skills-icon graphql">
+        <div class="skills-icon graphql" data-tooltip="GraphQL">
           {@html GQLIcon}
+        </div>
+        <div class="skills-icon python" data-tooltip="Python">
+          {@html PythonIcon}
+        </div>
+        <div class="skills-icon kubernetes" data-tooltip="Kubernetes">
+          {@html KubernetesIcon}
+        </div>
+        <div class="skills-icon redis" data-tooltip="Redis">
+          {@html RedisIcon}
+        </div>
+        <div class="skills-icon express" data-tooltip="Express">
+          {@html ExpressIcon}
+        </div>
+        <div class="skills-icon springboot" data-tooltip="Spring Boot">
+          {@html SpringBootIcon}
+        </div>
+        <div class="skills-icon redux" data-tooltip="Redux">
+          {@html ReduxIcon}
+        </div>
+        <div class="skills-icon claude" data-tooltip="Claude">
+          {@html ClaudeIcon}
+        </div>
+        <div class="skills-icon argo" data-tooltip="Argo Workflows">
+          {@html ArgoIcon}
+        </div>
+        <div class="skills-icon mcp" data-tooltip="MCP">
+          {@html MCPIcon}
         </div>
       </div>
     </div>
@@ -101,9 +148,9 @@
 
   .skills-icons {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     justify-items: center;
-    width: 700px;
+    width: 860px;
     margin: 0 auto;
     row-gap: 2rem;
   }
@@ -167,6 +214,56 @@
   .skills-icons > *:nth-child(18) {
     transition-delay: 0.795s;
   }
+  .skills-icons > *:nth-child(19) {
+    transition-delay: 0.83s;
+  }
+  .skills-icons > *:nth-child(20) {
+    transition-delay: 0.865s;
+  }
+  .skills-icons > *:nth-child(21) {
+    transition-delay: 0.9s;
+  }
+  .skills-icons > *:nth-child(22) {
+    transition-delay: 0.935s;
+  }
+  .skills-icons > *:nth-child(23) {
+    transition-delay: 0.97s;
+  }
+  .skills-icons > *:nth-child(24) {
+    transition-delay: 1.005s;
+  }
+
+  [data-tooltip] {
+    position: relative;
+  }
+
+  [data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 1rem);
+    left: 50%;
+    transform: translateX(-50%) translateY(0.4rem);
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      opacity 0.2s ease-out,
+      transform 0.2s ease-out;
+    z-index: 10;
+  }
+
+  [data-tooltip]:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 
   .skills-icon {
     height: 5.2rem;
@@ -182,69 +279,72 @@
     transform: scale(1.15);
   }
 
-  .skills-icon.css {
-    color: var(--color-primary-light);
+  .skills-icon.html {
+    fill: var(--color-secondary);
   }
 
-  .skills-icon.sass {
-    color: var(--color-pink);
+  .skills-icon.css {
+    fill: var(--color-primary-light);
   }
 
   .skills-icon.js {
-    color: var(--color-yellow);
+    fill: var(--color-yellow);
   }
 
   .skills-icon.node {
-    color: var(--color-green);
+    fill: var(--color-green);
   }
 
-  .skills-icon.npm {
-    color: var(--color-red);
+  .skills-icon.angular {
+    fill: var(--color-red);
   }
 
   .skills-icon.github {
-    color: var(--color-white);
+    fill: var(--color-white);
   }
 
   .skills-icon.react {
-    color: var(--color-primary-light);
+    fill: var(--color-primary-light);
   }
 
   .skills-icon.docker {
-    color: var(--color-primary-light);
+    fill: var(--color-primary-light);
   }
 
   .skills-icon.aws {
     fill: var(--color-secondary);
   }
 
-  .html {
-    height: 4.8rem;
-    width: 4.8rem;
-    color: var(--color-secondary);
-    opacity: 0;
-    transform: translateY(2rem);
-    transition:
-      opacity 0.5s ease-out,
-      transform 0.35s ease-out;
-  }
-
-  .html:hover {
-    transform: scale(1.15);
-  }
-
-  .rust {
-    color: white;
-    fill: var(--color-secondary);
-  }
-
-  .mongo {
-    color: white;
+  .skills-icon.kubernetes {
     fill: var(--color-white);
   }
 
-  .postgres {
-    color: red;
+  .skills-icon.redis {
+    fill: var(--color-red);
+  }
+
+  .skills-icon.express {
+    fill: var(--color-white);
+  }
+
+  .skills-icon.springboot {
+    fill: var(--color-green);
+  }
+
+  .skills-icon.redux {
+    fill: var(--color-pink);
+  }
+
+  .skills-icon.claude {
+    fill: var(--color-secondary);
+  }
+
+  .skills-icon.argo {
+    fill: #ef7b4d;
+  }
+
+  .skills-icon.mcp {
+    fill: var(--color-white);
   }
 
   @media (max-width: 59em) {

@@ -12,6 +12,7 @@
     "@rollup/plugin-commonjs": "^29.0.3",
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-terser": "^1.0.0",
+    "devicon": "^2.17.0",
     "prettier": "^3.9.6",
     "prettier-plugin-svelte": "^4.1.1",
     "rollup": "^4.63.1",
@@ -19,6 +20,7 @@
     "rollup-plugin-inline-svg": "^2.0.0",
     "rollup-plugin-livereload": "^2.0.5",
     "rollup-plugin-svelte": "^7.2.3",
+    "simple-icons": "^16.30.0",
     "svelte": "^5.57.0",
     "svelte-intersection-observer": "^2.2.0"
   },
