@@ -6,18 +6,25 @@
 
   const projects = [
     {
-      title: 'Omaha Place Finder',
-      image: '/img/place-finder.png',
-      description:
-        'Natural-language place search for Omaha, NE. PostGIS handles the geography, pgvector handles the semantics, and an LLM ties the two together — results capped and rate-limited to prevent abuse.',
-      url: 'https://ai-place-finder-one.vercel.app/',
-    },
-    {
       title: "What's in the Pantry",
       image: '/img/recipe-finder.png',
       description:
         'Describe a craving, what you have on hand, or a dietary constraint, and an LLM turns it into structured filters while pgvector finds the closest matches among 1,223 recipes. Ask the AI to adapt any recipe — vegan, gluten-free, halved — grounded in the original.',
       url: 'https://ai-recipe-helper-mu.vercel.app/',
+    },
+    {
+      title: 'Lumen AI',
+      image: '/img/lumen.png',
+      description:
+        'Landing page for an AI chatbot that trains on a company\'s own docs and website content to answer product questions instantly, with brand-matched styling and answers grounded entirely in the source material.',
+      url: 'https://ai-landing-page-eight-mu.vercel.app/',
+    },
+    {
+      title: 'Omaha Place Finder',
+      image: '/img/place-finder.png',
+      description:
+        'Natural-language place search for Omaha, NE. PostGIS handles the geography, pgvector handles the semantics, and an LLM ties the two together — results capped and rate-limited to prevent abuse.',
+      url: 'https://ai-place-finder-one.vercel.app/',
     },
   ]
 </script>
@@ -33,8 +40,7 @@
       <p class="portfolio-intro">
         Most of my recent work lives behind closed doors at the companies
         I've worked for, so there's not much of it I can show here. Instead,
-        here are a couple of things I've built recently to sharpen my AI
-        skills.
+        here are a few things I've built recently to sharpen my AI skills.
       </p>
       <div class="portfolio-grid">
         {#each projects as project}
@@ -104,7 +110,7 @@
 
   .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
   }
 
@@ -133,6 +139,10 @@
 
   .portfolio-card:nth-child(2) {
     transition-delay: 0.3s;
+  }
+
+  .portfolio-card:nth-child(3) {
+    transition-delay: 0.45s;
   }
 
   .portfolio-card:hover {
@@ -180,6 +190,12 @@
 
   .portfolio-card:hover .portfolio-link {
     color: var(--color-secondary-dark);
+  }
+
+  @media (max-width: 75em) {
+    .portfolio-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   @media (max-width: 59em) {
