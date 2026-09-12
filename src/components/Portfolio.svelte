@@ -13,13 +13,6 @@
       url: 'https://ai-recipe-helper-mu.vercel.app/',
     },
     {
-      title: 'Lumen AI',
-      image: '/img/lumen.png',
-      description:
-        'Landing page for an AI chatbot that trains on a company\'s own docs and website content to answer product questions instantly, with brand-matched styling and answers grounded entirely in the source material.',
-      url: 'https://ai-landing-page-eight-mu.vercel.app/',
-    },
-    {
       title: 'Omaha Place Finder',
       image: '/img/place-finder.png',
       description:
@@ -110,7 +103,9 @@
 
   .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 860px;
+    margin: 0 auto;
     gap: 3rem;
   }
 
@@ -139,10 +134,6 @@
 
   .portfolio-card:nth-child(2) {
     transition-delay: 0.3s;
-  }
-
-  .portfolio-card:nth-child(3) {
-    transition-delay: 0.45s;
   }
 
   .portfolio-card:hover {
@@ -190,12 +181,6 @@
 
   .portfolio-card:hover .portfolio-link {
     color: var(--color-secondary-dark);
-  }
-
-  @media (max-width: 75em) {
-    .portfolio-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
   }
 
   @media (max-width: 59em) {
